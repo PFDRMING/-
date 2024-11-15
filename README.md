@@ -1,13 +1,7 @@
-# -
-以下是一个Python代码，它会遍历指定文件夹中的所有文件，将每个文件名按序号列出，格式为“1. 文件名”，并将其保存到一个TXT文件中。
-改进一：
-输入原文件夹路径：程序会提示用户输入包含文件的文件夹路径。
-检查路径有效性：如果文件夹不存在，程序会提示错误并退出。
-输入生成文件夹路径：程序会提示用户输入生成的TXT文件保存在哪个文件夹。
-如果指定的文件夹不存在，程序会自动创建该文件夹。
-生成文件列表：程序将文件名列表写入到指定输出路径的 file_list.txt 文件中。
-改进二：
-文件名按字母顺序排列：使用 sorted() 函数对文件名进行 A-Z 排序。
-生成文件名带日期：使用 datetime.now().strftime("%Y-%m-%d") 获取当前日期，并将其添加到输出文件名中，格式为“名单-YYYY-MM-DD.txt”。
-输出文件夹不存在时自动创建：如果生成文件夹不存在，程序会自动创建。
-改进用户体验：程序会在运行结束时打印生成文件的路径。
+This Python script generates a sorted list of filenames from a specified folder, saves the list to a text file, and names the output file with the current date in the format "List-YYYY-MM-DD.txt". Here’s how it works:
+
+Prompt for Folder Paths: The script prompts the user to enter the source folder path (to read files) and the destination folder path (to save the output file).
+Check Folder Validity: It checks if the source folder exists and verifies or creates the destination folder if it doesn’t already exist.
+Sort and List Filenames: It retrieves the filenames, filters out subdirectories, sorts them alphabetically (A-Z), and numbers them in a list format.
+Generate Output with Date: The list is saved to a file named "List-YYYY-MM-DD.txt" (with the current date in the format YYYY-MM-DD) in the specified destination folder.
+This script is useful for quickly generating organized, date-stamped lists of files from a directory.
